@@ -1,0 +1,67 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.12/MicrosoftTeams.schema.json",
+    "version": "1.0.8",
+    "manifestVersion": "1.12",
+    "id": "ca5e70ed-1bf0-4225-8a0d-c15432beef29",
+    "packageName": "com.microsoft.teams.liveshareinking",
+    "name": {
+        "short": "Design thinking",
+        "full": "Storyboarding and Experience-based Roadmap"
+    },
+    "developer": {
+        "name": "Zhicheng Liu",
+        "mpnId": "",
+        "websiteUrl": "https://5020-2404-f801-9000-18-6fec-00-6e5.ap.ngrok.io",
+        "privacyUrl": "https://www.example.com/PrivacyStatement",
+        "termsOfUseUrl": "https://www.example.com/TermsOfUse"
+    },
+    "description": {
+        "short": "Livesharesdk used for IBM design thinking",
+        "full": "It contains two interfaces: Storyboarding and Experience-based Roadmap."
+    },
+    "icons": {
+        "outline": "outline.png",
+        "color": "color.png"
+    },
+    "accentColor": "#FFFFFF",
+    "configurableTabs": [
+        {            
+            "configurationUrl": "https://c62e-144-82-8-218.ngrok-free.app/?view=config&inTeams=1",
+            "canUpdateConfiguration": false,
+            "scopes": [
+                "groupchat"
+            ],
+            "context": [
+                "meetingSidePanel",
+                "meetingStage"
+            ]
+        }
+    ],
+    "validDomains": [
+        "*.ngrok.io",
+        "x-dev.azurewebsites.net"
+    ],
+    "authorization": {
+        "permissions": {
+            "orgWide": [],
+            "resourceSpecific": [
+                {
+                    "name": "MeetingStage.Write.Chat",
+                    "type": "Delegated"
+                },
+                {
+                    "name": "ChannelMeetingStage.Write.Group",
+                    "type": "Delegated"
+                },
+                {
+                    "name": "LiveShareSession.ReadWrite.Chat",
+                    "type": "Delegated"
+                },
+                {
+                    "name": "LiveShareSession.ReadWrite.Group",
+                    "type": "Delegated"
+                }
+            ]
+        }
+    }
+}

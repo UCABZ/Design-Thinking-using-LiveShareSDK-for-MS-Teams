@@ -1,0 +1,256 @@
+
+  html,
+  body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      /* min-width: 900px; */
+  }
+
+  svg g[id^="sticker"] {
+      pointer-events: none;
+      box-shadow: 2px 2px 2px 2px gray;
+      -webkit-filter: drop-shadow(2px 2px 8px rgb(169, 169, 169));
+      filter: drop-shadow(2px 2px 8px rgb(142, 141, 141));
+      z-index: -1;
+  }
+
+  div {
+      box-sizing: content-box;
+  }
+
+  .container {
+    background-color: rgb(255, 255, 255);
+      /* width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; */
+  }
+
+  /* head tool */
+  .header {
+      height: 50px;
+      border-bottom: 1px solid black;
+      display: flex;
+      position: relative;
+      z-index: 10;
+      background-color: #fff;
+  }
+
+  .header .name {
+      line-height: 50px;
+      padding: 0 60px 0 40px;
+      font-size: 20px;
+      font-weight: bold;
+      position: relative;
+      border-right: 1px solid black;
+  }
+
+  .header .name #page-name {
+      word-break: keep-all;
+      white-space: nowrap;
+  }
+
+  .header .name #page-select {
+      position: absolute;
+      right: 24px;
+      top: 20px;
+      width: 22px;
+      cursor: pointer;
+  }
+
+  .header .name #page {
+      background-color: #fff;
+      box-shadow: 0px 0px 2px 2px rgb(228, 227, 227);
+      width: 230px;
+      position: absolute;
+      right: -100px;
+      top: 44px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: normal;
+      z-index: 99;
+      display: none;
+  }
+
+  .header .name #page div {
+      line-height: 44px;
+      padding: 0 16px;
+      font-size: 16px;
+      transition: all .2s;
+      word-break: break-all;
+  }
+
+  .header .name #page div:hover {
+      background-color: beige;
+  }
+
+  .header .tool {
+      padding: 7px 20px 0;
+      display: flex;
+      border-right: 1px solid black;
+  }
+
+  .header .tool .item {
+      width: 80px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .header .tool .item img {
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      /* position: absolute;
+      right: 24px;
+      top: 20px; */
+  }
+
+  .header .tool .item span {
+      font-size: 14px;
+      margin-top: -3px;
+      cursor: pointer;
+  }
+
+  .header .config {
+      display: flex;
+      padding: 0 30px 0;
+  }
+
+  .header .config>div {
+      width: 80px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .header .config>div span {
+      margin-bottom: 4px;
+      display: block;
+      font-size: 12px;
+  }
+
+  .header .config>div input {
+      display: block;
+      height: 20px;
+      width: 30px;
+  }
+
+
+
+  .container-content {
+      position: relative;
+      width: calc(100vw - 80px);
+      height: calc(100vh - 140px);
+      overflow: hidden;
+      margin: 0 auto;
+      margin-top: 40px;
+      overflow: hidden;
+      background-color: rgb(214, 214, 214);
+  }
+
+  #drawing-board{
+    background-color: rgb(214, 214, 214);
+  }
+
+  .container-content video {
+      width: 100%;
+      height: 100%;
+  }
+
+  .container-content img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+  }
+
+ 
+  #drawing-board {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%
+  }
+
+  #content-wrap {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+  }
+
+  #add{
+    position: fixed;
+    bottom: 20px;
+    right: 90px;
+    background-color: rgb(213, 211, 211);
+    font-size: 20px;
+    border-radius: 5px;
+    width: 40px;
+    text-align: center;
+    height: 26px;
+    line-height: 24px;
+    cursor: pointer;
+  }
+  #subtract{
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    background-color: rgb(213, 211, 211);
+    font-size: 20px;
+    border-radius: 5px;
+    width: 40px;
+    text-align: center;
+    height: 26px;
+    line-height: 24px;
+    cursor: pointer;
+  }
+
+  
+  .tool-bar {
+      padding: 0 20px;
+      margin-top: 20px;
+      width: 100%;
+      height: 50px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .tool-bar button {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      color: rgba(0, 0, 0, 0.8);
+      border-radius: 4px;
+  }
+
+  .tool-bar button:active {
+      color: rgba(0, 0, 0, 0.4);
+  }
+
+  .tool-bar span {
+      font-size: 14px;
+  }
+
+  #display-max{
+    position: fixed;
+    top: 100px;
+    left: calc(70% + 40px);
+    font-size: 20px;
+    font-weight: bold;
+    color: red
+  }
