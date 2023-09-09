@@ -1,6 +1,4 @@
-# Live Canvas demo
 
-This repository contains a simple demo of how to use `LiveCanvas` and `InkingManager` to implement a collaborative inking surface.
 
 ## Getting started
 
@@ -9,8 +7,6 @@ After cloning the repository, you must first set up the npm workspace from the r
 ```bash
 npm install
 npm run build:packages # Build Live Share packages
-cd samples/j*/03*
-```
 
 _Note:_ Do not run `npm start` before running `npm run build:packages` from the root of the project, unless you first move the sample out of this npm workspace. When using our samples, you are testing the packages using symlinks, and not the Live Share SDK versions published to npm.
 
